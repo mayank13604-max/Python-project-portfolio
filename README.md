@@ -8,7 +8,7 @@ A collection of four interactive terminal applications built to showcase core pr
 ## 🚀 Included Projects
 
 * **Caesar Cipher:** A cryptographic tool to encrypt and decrypt text using character shifts.
-* **Coffee Machine (OOP):** A state-based beverage vending machine simulation built entirely with Object-Oriented Programming.
+* **Coffee Machine :** A state-based beverage vending machine simulation.
 * **Hangman Game:** A classic terminal word-guessing game featuring dynamic text visuals.
 * **Compound Interest Calculator:** A financial utility script that computes investment growth over time.
 
