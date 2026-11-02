@@ -1,0 +1,150 @@
+hangman_word = ("python", "computer", "keyboard", "mountain", "elephant",
+                "football", "chocolate", "airplane", "sunshine", "adventure",
+                "galaxy", "dinosaur", "smartphone", "basketball", "pineapple",
+                "rainbow", "thunder", "treasure", "astronaut", "watermelon",
+                "volcano", "telescope", "butterfly", "penguin", "castle",
+                "diamond", "pirate", "robot", "spaceship", "fireworks",
+                "hamburger", "jungle", "ocean", "wizard", "universe",
+                "guitar", "camera", "library", "monster","program")
+
+print('''
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _' | '_ \ / _' | '_ ' _ \ / _' | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/ 
+''')
+print("Welcome to the Hangman game.")
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', ''' 
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /    |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+import random
+
+lives = 6
+
+word = random.choice(hangman_word)
+
+placeholder = ""
+
+for position in range(len(word)):
+    placeholder += "_"
+
+print(placeholder)
+
+game_over = False
+correct_letters = []
+guessed_letter = []
+while True:
+    while not game_over:
+
+        print(f"*************{lives}/6 LIVES LEFT*************")
+
+        guess =  input("Enter a letter you think it is in the secret word? ").lower()
+
+        if len(guess) != 1 or not guess.isalpha():
+            print("INVALID input!")
+            guess = input("Enter a letter you think it is in the secret word? ").lower()
+
+        guessed_letter.append(guess)
+
+        print(f"You have guessed this letter till know {guessed_letter}")
+
+        if guess in correct_letters:
+            print(f"You've already guessed the letter {guess}")
+
+        display = ""
+
+        for letter in word:
+            if letter == guess:
+                display += letter
+                correct_letters.append(letter)
+            elif letter in correct_letters:
+                display += letter
+            else:
+                display += "_"
+
+        print(f"Word to guess: " + display, end=" ")
+
+        if guess not in word:
+            lives -= 1 
+            print(f"You guessed {guess}, that's not in the word. you lose a life. TRY something else.")
+
+            if lives == 0:
+                game_over = True
+                print(f"*************IT WAS {word.capitalize()} YOU LOSE*************")
+
+        if "_" not in display:
+            game_over = True
+            print("*************YOU WIN*************")
+
+        print(stages[lives])    
+
+    Play_again = input("Would you like to play again? y for yes and n for no \n").lower()
+
+    while Play_again not in ("y", "n"):
+            print("INVALID INPUT!")
+            Play_again = input("Would you like to play again? y for yes and n for no \n").lower()
+
+    if Play_again == "n":
+        print("Thank's for playing.")
+        break
+        
