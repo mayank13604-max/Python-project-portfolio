@@ -1,4 +1,4 @@
-<img width="2880" height="772" alt="image" src="https://github.com/user-attachments/assets/25e5bf78-021d-4aaf-b379-4acb145f2e28" /># Python-project-portfolio
+# Python-project-portfolio
 A collection of 4 Python CLI applications—Caesar Cipher, OOP Coffee Machine, Hangman, and a Compound Interest Calculator—demonstrating clean code, logical problem-solving, and object-oriented design.
 
 # Python Mini-Projects
