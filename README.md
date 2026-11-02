@@ -1,14 +1,12 @@
-# Python-project-portfolio
-A collection of 4 Python CLI applications—Caesar Cipher, OOP Coffee Machine, Hangman, and a Compound Interest Calculator—demonstrating clean code, logical problem-solving, and object-oriented design.
+# Python Projects Portfolio
 
-# Python Mini-Projects
-
-A collection of four interactive terminal applications built to showcase core programming principles, object-oriented design, and algorithms in Python.
+A collection of five interactive Python applications built to showcase GUI development, core programming principles, object-oriented design, and algorithms.
 
 ## 🚀 Included Projects
 
+* **Pomodoro Timer:** A desktop countdown timer application built with a graphical user interface (GUI) using Tkinter to boost productivity.
 * **Caesar Cipher:** A cryptographic tool to encrypt and decrypt text using character shifts.
-* **Coffee Machine :** A state-based beverage vending machine simulation.
+* **Coffee Machine:** A state-based beverage vending machine simulation.
 * **Hangman Game:** A classic terminal word-guessing game featuring dynamic text visuals.
 * **Compound Interest Calculator:** A financial utility script that computes investment growth over time.
 
@@ -16,8 +14,8 @@ A collection of four interactive terminal applications built to showcase core pr
 
 ## 🛠️ Tech Stack & Requirements
 * **Language:** Python 3.x
+* **GUI Framework:** Tkinter (Built-in)
 * **Libraries:** Standard built-in libraries (`math`, `random`, `os`)
-* **Interface:** Command Line Interface (CLI)
 
 ---
 
@@ -26,12 +24,13 @@ A collection of four interactive terminal applications built to showcase core pr
 ### Clone the Repository
 ```bash
 git clone https://github.com
-cd python-mini-projects
+cd Python-project-portfolio
 ```
 
 ### Run the Applications
-Execute any of the scripts directly from your terminal:
+Execute any of the scripts directly from your terminal/command line:
 ```bash
+python pomodoro.py
 python caesar_cipher.py
 python coffee_machine_oop.py
 python hangman.py
